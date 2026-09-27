@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 660" width="1000" height="660" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <style>
+    .w   { stroke:#1f2937; stroke-width:2; fill:none; stroke-linecap:round; }
+    .pw  { stroke:#c2410c; stroke-width:2; fill:none; stroke-linecap:round; }
+    .box { fill:#f8fafc; stroke:#1f2937; stroke-width:2; }
+    .pin { font-family:Consolas, Menlo, monospace; font-size:12px; fill:#111827; }
+    .ref { font-size:14px; font-weight:700; fill:#111827; }
+    .sub { font-size:11px; fill:#4b5563; }
+    .lbl { font-size:11px; fill:#374151; }
+    .v33 { font-family:Consolas, Menlo, monospace; font-size:12px; font-weight:700; fill:#c2410c; }
+    .dot { fill:#1f2937; }
+  </style>
+  <rect width="1000" height="660" fill="#ffffff"/>
+
+  <!-- ============ U1 ESP32 ============ -->
+  <rect class="box" x="420" y="110" width="220" height="430" rx="4"/>
+  <text class="ref" x="530" y="138" text-anchor="middle">U1 · ESP32 DevKit</text>
+  <text class="sub" x="530" y="154" text-anchor="middle">ESP-WROOM-32</text>
+  <!-- left pins -->
+  <text class="pin" x="430" y="184">GPIO21 SDA</text>
+  <text class="pin" x="430" y="224">GPIO22 SCL</text>
+  <text class="pin" x="430" y="344">GPIO26</text>
+  <text class="pin" x="430" y="394">GPIO32</text>
+  <text class="pin" x="430" y="444">GPIO27</text>
+  <text class="pin" x="430" y="494">GPIO25</text>
+  <!-- right pins -->
+  <text class="pin" x="630" y="184" text-anchor="end">GPIO18 SCK</text>
+  <text class="pin" x="630" y="224" text-anchor="end">GPIO23 MOSI</text>
+  <text class="pin" x="630" y="264" text-anchor="end">GPIO4</text>
+  <text class="pin" x="630" y="304" text-anchor="end">GPIO2</text>
+  <!-- power pins -->
+  <line class="pw" x1="480" y1="110" x2="480" y2="84"/>
+  <line class="pw" x1="468" y1="84" x2="492" y2="84"/>
+  <text class="v33" x="480" y="77" text-anchor="middle">3V3</text>
+  <line class="w" x1="580" y1="540" x2="580" y2="566"/>
+  <g class="w"><line x1="566" y1="566" x2="594" y2="566"/><line x1="571" y1="572" x2="589" y2="572"/><line x1="576" y1="578" x2="584" y2="578"/></g>
+  <text class="pin" x="580" y="532" text-anchor="middle">GND</text>
+
+  <!-- ============ U2 OLED ============ -->
+  <rect class="box" x="90" y="110" width="150" height="140" rx="4"/>
+  <text class="ref" x="165" y="134" text-anchor="middle">U2 · SSD1306</text>
+  <text class="sub" x="165" y="150" text-anchor="middle">0.96in OLED · I²C 0x3C</text>
+  <text class="pin" x="98"  y="184">VDD</text>
+  <text class="pin" x="98"  y="224">GND</text>
+  <text class="pin" x="232" y="184" text-anchor="end">SDA</text>
+  <text class="pin" x="232" y="224" text-anchor="end">SCL</text>
+  <!-- OLED power -->
+  <polyline class="pw" points="90,180 50,180 50,156"/>
+  <line class="pw" x1="38" y1="156" x2="62" y2="156"/>
+  <text class="v33" x="50" y="149" text-anchor="middle">3V3</text>
+  <polyline class="w" points="90,220 50,220 50,240"/>
+  <g class="w"><line x1="36" y1="240" x2="64" y2="240"/><line x1="41" y1="246" x2="59" y2="246"/><line x1="46" y1="252" x2="54" y2="252"/></g>
+  <!-- I2C bus -->
+  <line class="w" x1="240" y1="180" x2="420" y2="180"/>
+  <line class="w" x1="240" y1="220" x2="420" y2="220"/>
+  <text class="lbl" x="330" y="173" text-anchor="middle">SDA</text>
+  <text class="lbl" x="330" y="213" text-anchor="middle">SCL</text>
+
+  <!-- ============ U3 ST7789 ============ -->
+  <rect class="box" x="800" y="110" width="150" height="330" rx="4"/>
+  <text class="ref" x="875" y="134" text-anchor="middle">U3 · ST7789</text>
+  <text class="sub" x="875" y="150" text-anchor="middle">1.3in 240×240 IPS · SPI</text>
+  <text class="pin" x="808" y="184">SCL</text>
+  <text class="pin" x="808" y="224">SDA</text>
+  <text class="pin" x="808" y="264">RES</text>
+  <text class="pin" x="808" y="304">DC</text>
+  <text class="pin" x="808" y="344">BLK</text>
+  <text class="pin" x="808" y="384">VCC</text>
+  <text class="pin" x="808" y="424">GND</text>
+  <text class="sub" x="942" y="424" text-anchor="end">no CS pin</text>
+  <!-- SPI signals -->
+  <line class="w" x1="640" y1="180" x2="800" y2="180"/>
+  <line class="w" x1="640" y1="220" x2="800" y2="220"/>
+  <line class="w" x1="640" y1="260" x2="800" y2="260"/>
+  <line class="w" x1="640" y1="300" x2="800" y2="300"/>
+  <text class="lbl" x="720" y="173" text-anchor="middle">SCK</text>
+  <text class="lbl" x="720" y="213" text-anchor="middle">MOSI</text>
+  <text class="lbl" x="720" y="253" text-anchor="middle">RST</text>
+  <text class="lbl" x="720" y="293" text-anchor="middle">DC</text>
+  <!-- BLK + VCC to 3V3 -->
+  <polyline class="pw" points="800,340 750,340 750,380 800,380"/>
+  <polyline class="pw" points="750,360 715,360 715,336"/>
+  <circle cx="750" cy="360" r="3.5" fill="#c2410c"/>
+  <line class="pw" x1="703" y1="336" x2="727" y2="336"/>
+  <text class="v33" x="715" y="329" text-anchor="middle">3V3</text>
+  <!-- GND -->
+  <polyline class="w" points="800,420 750,420 750,440"/>
+  <g class="w"><line x1="736" y1="440" x2="764" y2="440"/><line x1="741" y1="446" x2="759" y2="446"/><line x1="746" y1="452" x2="754" y2="452"/></g>
+
+  <!-- ============ BUTTONS ============ -->
+  <!-- GND bus -->
+  <line class="w" x1="180" y1="340" x2="180" y2="520"/>
+  <g class="w"><line x1="166" y1="520" x2="194" y2="520"/><line x1="171" y1="526" x2="189" y2="526"/><line x1="176" y1="532" x2="184" y2="532"/></g>
+  <circle class="dot" cx="180" cy="390" r="3.5"/>
+  <circle class="dot" cx="180" cy="440" r="3.5"/>
+  <circle class="dot" cx="180" cy="490" r="3.5"/>
+
+  <!-- one row per button: bus(180) — label — switch(270..320) — pin(420) -->
+  <g id="sw">
+    <line class="w" x1="180" y1="340" x2="267" y2="340"/>
+    <line class="w" x1="323" y1="340" x2="420" y2="340"/>
+    <circle cx="270" cy="340" r="3" fill="#fff" stroke="#1f2937" stroke-width="2"/>
+    <circle cx="320" cy="340" r="3" fill="#fff" stroke="#1f2937" stroke-width="2"/>
+    <line class="w" x1="266" y1="330" x2="324" y2="330"/>
+    <line class="w" x1="295" y1="330" x2="295" y2="320"/>
+    <line class="w" x1="287" y1="320" x2="303" y2="320"/>
+  </g>
+  <use href="#sw" y="50"/>
+  <use href="#sw" y="100"/>
+  <use href="#sw" y="150"/>
+  <text class="lbl" x="224" y="333" text-anchor="middle">SW1 UP</text>
+  <text class="lbl" x="224" y="383" text-anchor="middle">SW2 DOWN</text>
+  <text class="lbl" x="224" y="433" text-anchor="middle">SW3 OK</text>
+  <text class="lbl" x="224" y="483" text-anchor="middle">SW4 BACK</text>
+  <text class="sub" x="300" y="528" text-anchor="middle">internal pull-ups · active LOW</text>
+
+  <!-- ============ NOTES / TITLE ============ -->
+  <text class="sub" x="30" y="600">Not shown: LiPo cell, power switch, buzzer and nRF24L01 module.</text>
+  <text class="sub" x="30" y="616">They are fitted on the board but not used by this firmware.</text>
+  <rect x="680" y="570" width="290" height="66" fill="none" stroke="#1f2937" stroke-width="1.5"/>
+  <line x1="680" y1="596" x2="970" y2="596" stroke="#1f2937" stroke-width="1"/>
+  <text class="ref" x="692" y="589">CPU Scheduler Visualizer</text>
+  <text class="lbl" x="692" y="614">Schematic · ESP32 + ST7789 + SSD1306</text>
+  <text class="lbl" x="692" y="629">Rev 1 · Sep 2026</text>
+</svg>
